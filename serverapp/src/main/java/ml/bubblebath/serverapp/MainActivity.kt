@@ -35,16 +35,18 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 val currentDestination by navController.currentBackStackEntryAsState()
                 Scaffold(modifier = Modifier.fillMaxSize(), topBar = {
-                    CenterAlignedTopAppBar(navigationIcon = {
-                        if (currentDestination?.destination?.route != NavRoutes.MainScreen.uri) {
-                            IconButton(onClick = { navController.popBackStack() }) {
-                                Icon(
-                                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                                    contentDescription = null
-                                )
+                    CenterAlignedTopAppBar(
+                        navigationIcon = {
+                            if (currentDestination?.destination?.route != NavRoutes.MainScreen.uri) {
+                                IconButton(onClick = { navController.popBackStack() }) {
+                                    Icon(
+                                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                                        contentDescription = null
+                                    )
+                                }
                             }
-                        }
-                    }, title = { Text(stringResource(id = ml.bubblebath.testtask.R.string.app_name)) })
+                        },
+                        title = { Text(stringResource(id = ml.bubblebath.testtask.R.string.app_name)) })
                 }) { innerPadding ->
                     NavHost(
                         modifier = Modifier.padding(innerPadding),

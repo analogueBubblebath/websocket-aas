@@ -12,7 +12,7 @@ class MainApplication : Application() {
 
         startKoin {
             androidContext(this@MainApplication)
-            modules(ml.bubblebath.serverapp.di.appModule)
+            modules(appModule)
         }
     }
 }

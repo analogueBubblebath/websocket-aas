@@ -5,7 +5,11 @@ class ConfigScreenStateReducer {
         return when (intent) {
             is ConfigScreenIntent.PortInput -> {
                 when {
-                    intent.newText.isEmpty() -> state.copy(port = intent.newText, isSaveButtonEnabled = false)
+                    intent.newText.isEmpty() -> state.copy(
+                        port = intent.newText,
+                        isSaveButtonEnabled = false
+                    )
+
                     intent.newText.toUShortOrNull() == null -> state
                     else -> state.copy(port = intent.newText, isSaveButtonEnabled = true)
                 }
