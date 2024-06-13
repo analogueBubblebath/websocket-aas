@@ -1,4 +1,4 @@
-package ml.bubblebath
+package ml.bubblebath.clientapp
 
 import android.app.Application
 import ml.bubblebath.clientapp.di.appModule

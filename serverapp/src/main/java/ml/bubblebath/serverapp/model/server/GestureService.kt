@@ -3,9 +3,7 @@ package ml.bubblebath.serverapp.model.server
 import io.ktor.server.websocket.DefaultWebSocketServerSession
 import ml.bubblebath.serverapp.model.logs.GestureServiceLogger
 import ml.bubblebath.serverapp.model.repository.gesture.GestureRepository
-import ml.bubblebath.serverapp.model.repository.gesture.GestureRepositoryMock
 import java.util.Collections
-import java.util.LinkedHashSet
 
 class GestureService(
     private val logger: GestureServiceLogger,

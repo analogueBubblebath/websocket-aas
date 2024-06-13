@@ -15,8 +15,4 @@ class MainScreenViewModel(private val reducer: MainScreenReducer) : ViewModel() 
             _uiState.value = reducer.reduce(uiState.value, intent)
         }
     }
-
-    override fun onCleared() {
-        super.onCleared()
-    }
 }
