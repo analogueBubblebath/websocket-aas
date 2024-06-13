@@ -1,0 +1,9 @@
+<resources>
+    <string name="accessibility_service_label">GestureAccessibilityService</string>
+    <string name="app_name">WS client</string>
+    <string name="client_start">Start</string>
+    <string name="client_pause">Pause</string>
+    <string name="client_config">Config</string>
+    <string name="client_save">Save</string>
+    <string name="client_open_settings">Open accessibility settings</string>
+</resources>

@@ -1,0 +1,13 @@
+import ml.bubblebath.serverapp.model.logs.LogLevel;
+
+CREATE TABLE Log (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    logLevel TEXT AS LogLevel NOT NULL,
+    message TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM Log;
+
+insert:
+INSERT INTO Log(logLevel, message) VALUES (?, ?);
